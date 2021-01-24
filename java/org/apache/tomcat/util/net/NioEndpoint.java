@@ -416,6 +416,7 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel,SocketChannel> 
 
     @Override
     protected SocketChannel serverSocketAccept() throws Exception {
+        // 连接接入
         return serverSock.accept();
     }
 
@@ -613,6 +614,7 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel,SocketChannel> 
 
         /**
          * Registers a newly created socket with the poller.
+         * 注册一个客户的socket channel到poller中
          *
          * @param socket    The newly created socket
          */
